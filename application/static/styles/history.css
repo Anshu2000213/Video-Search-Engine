@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.user-history {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-history-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.video-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.video-title {
+    font-size: 18px;
+    font-weight: bold;
+}

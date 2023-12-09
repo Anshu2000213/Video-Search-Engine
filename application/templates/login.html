@@ -1,0 +1,57 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            text-align: center;
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/005/288/071/original/abstract-technology-background-can-be-used-as-a-newsroom-background-or-other-free-video.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        #loginContainer {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: auto;
+            width: 50%;
+            margin-top: 100px;
+        }
+
+        input, button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginContainer">
+        <h2 id="loginSignup">Login/Signup</h2>
+        <form id="loginForm">
+            <div>
+                <input type="text" id="username" placeholder="Enter your Username" name="username" required>
+            </div>
+
+            <div>
+                <input type="password" id="password" placeholder="Enter your Password" name="password" required>
+            </div>
+
+            <button type="button" id="loginSignupButton" onclick="attemptLogin()">Login/Signup</button>
+            <p id="loginError" class="error"><span id="loginErrorText"></span></p>
+        </form>
+    </div>
+
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!-- index.html -->
+<!-- dark mode -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Search Engine</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+</head>
+<body>
+    <div id="topMost">
+        <a href="index.html" id="refreshButton"><h2 id="pageTitle">Video Search</h2></a>
+        <button id="toggleDarkMode" onclick="">Toggle Dark Mode</button>
+    </div>  
+    <div id="topPanel">
+        <div id="searchQueryPanel">
+            <input type="text" id="searchQuery" placeholder="Enter your search query">
+            <button id="searchButton">Search &#128269;</button>
+        </div>
+        <div id="leftButtons">
+            <div id="upload_button">
+                <a><button>Upload &#8682;</button></a>
+            </div>
+            <div id="history_button">
+                <a><button>History &#128345;</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="mainContainer">
+        <div id="leftPanel">
+            <h2 id="titleVideo"></h2>
+            <div>
+                <iframe id="videoPlayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div id="countsContainer" style="display: none;">
+                <button id="likeButton">Likes: <span id="likeCount">0</span></button>
+                <p id="viewCount">Views: <span id="actualViewCount"></span></p>
+                <p id="commentCount">Comment Count: <span id="actualCommentCount"></span></p>
+                <p id="timestamp">Uploaded At: <span id="actualTimestamp"></span></p>
+                <div id="videoDetails">
+                    <p id="videoDescription">Description: <span id="actualVideoDescription"></span></p>
+                </div>
+                <p>Comments:</p>
+                <div>
+                    <input type="text" placeholder="Enter your Comment" id="enterComment">
+                    <button id="submitComment" onclick="postComment()">Post</button>
+                </div>
+                <hr>
+                <div id="commentsContainer"></div>
+            </div>
+        </div>
+
+        <div id="rightPanel">
+            <div id="searchResultPanel">
+                <h2>Search Results</h2>
+            </div>
+            <div id="loader" style="display: none;"></div>
+            <div id="videosList" style="display: none;">
+                <div id = "SRvideo_1">
+                    <img id="thumbnail1">
+                    <p id="title1"></p>
+                </div>
+                <div id = "SRvideo_2">
+                    <img id="thumbnail2">
+                    <p id="title2"></p>
+                </div>
+                <div id = "SRvideo_3">
+                    <img id="thumbnail3">
+                    <p id="title3"></p>
+                </div>
+                <div id = "SRvideo_4">
+                    <img id="thumbnail4">
+                    <p id="title4"></p>
+                </div>
+                <div id = "SRvideo_5">
+                    <img id="thumbnail5">
+                    <p id="title5"></p>
+                </div>
+                <div id = "SRvideo_6">
+                    <img id="thumbnail6">
+                    <p id="title6"></p>
+                </div>
+                <div id = "SRvideo_7">
+                    <img id="thumbnail7">
+                    <p id="title7"></p>
+                </div>
+                <div id = "SRvideo_8">
+                    <img id="thumbnail8">
+                    <p id="title8"></p>
+                </div>
+                <div id = "SRvideo_9">
+                    <img id="thumbnail9">
+                    <p id="title9"></p>
+                </div>
+                <div id = "SRvideo_10">
+                    <img id="thumbnail10">
+                    <p id="title10"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>

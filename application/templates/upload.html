@@ -1,0 +1,30 @@
+<!-- upload.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Video</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/upload.css') }}">
+    <style>
+        body{
+            text-align: center;
+        }
+
+        input, button{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload a Video</h1>
+    <form id="uploadForm">
+        <label for="videoTitle">Video URL:</label>
+        <input type="text" id="videoTitle" name="videoTitle" required>
+        <br>
+        <input type="submit" value="Upload">
+        <p id="uploadError" class="error"><span id="uploadErrorText"></span></p>
+    </form>
+    <script src="{{url_for('static', filename='upload.js')}}"></script>
+</body>
+</html>

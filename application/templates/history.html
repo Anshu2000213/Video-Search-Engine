@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User History Page</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/history.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>User History</h1>
+    </header>
+
+    <section>
+        <ul class="user-history" id="userHistoryList">
+            <!-- Dynamic list items will be added here -->
+        </ul>
+    </section>
+    <script src="{{url_for('static', filename='history.js')}}"></script>
+</body>
+</html>
